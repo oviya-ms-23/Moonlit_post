@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon.com. Spend less. Smile more.</title>
+  <meta name="description" content="Free shipping on millions of items. Get the best of Shopping and Entertainment with Prime. Enjoy low prices on electronics, apparel, books, home & kitchen, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header-wrapper">
+    <!-- Top Bar -->
+    <div class="navbar-top">
+      <!-- Amazon Logo -->
+      <a href="index.html" class="nav-box nav-logo-box" aria-label="Amazon Home">
+        <div class="amz-logo">
+          <span>amazon</span>
+          <svg class="logo-smile" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 14C24 23 70 23 96 6" stroke="#FF9900" stroke-width="4" stroke-linecap="round"/>
+            <path d="M88 4L97 6L91 14" fill="#FF9900"/>
+          </svg>
+          <span class="logo-domain">.com</span>
+        </div>
+      </a>
+
+      <!-- Deliver To Widget -->
+      <div class="nav-box nav-deliver-box" id="nav-deliver-box" title="Click to change delivery ZIP code">
+        <div class="deliver-icon">📍</div>
+        <div class="deliver-text">
+          <span class="deliver-line1">Deliver to</span>
+          <span class="deliver-line2" id="deliver-zip-text">New York 10001</span>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <form class="nav-search-bar" id="nav-search-form">
+        <select class="search-category-select" id="nav-search-category" aria-label="Select Category">
+          <option value="All">All Departments</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Books">Books</option>
+          <option value="Home & Kitchen">Home & Kitchen</option>
+          <option value="Sports">Sports</option>
+          <option value="Beauty">Beauty</option>
+          <option value="Toys">Toys & Games</option>
+          <option value="Automotive">Automotive</option>
+        </select>
+        <input type="text" class="search-input" id="nav-search-input" placeholder="Search Amazon" aria-label="Search" />
+        <button type="submit" class="search-btn" aria-label="Search Submit">
+          <svg viewBox="0 0 24 24">
+            <path d="M21.71 20.29l-5.4-5.4A7.9 7.9 0 0 0 18 10a8 8 0 1 0-8 8 7.9 7.9 0 0 0 4.89-1.69l5.4 5.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM4 10a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Language selector -->
+      <div class="nav-box" style="gap: 4px; padding: 10px 8px;">
+        <span style="font-size: 16px;">🇺🇸</span>
+        <span style="font-weight: 700; font-size: 14px;">EN</span>
+        <span class="nav-caret"></span>
+      </div>
+
+      <!-- Account & Lists -->
+      <a href="login.html" class="nav-box">
+        <div class="nav-right-text">
+          <span class="nav-line1" id="nav-user-greeting">Hello, sign in</span>
+          <span class="nav-line2">Account & Lists <span class="nav-caret"></span></span>
+        </div>
+      </a>
+
+      <!-- Returns & Orders -->
+      <a href="account.html" class="nav-box">
+        <div class="nav-right-text">
+          <span class="nav-line1">Returns</span>
+          <span class="nav-line2">& Orders</span>
+        </div>
+      </a>
+
+      <!-- Cart Button -->
+      <a href="cart.html" class="nav-box nav-cart-box" aria-label="Cart">
+        <div class="cart-icon-wrap">
+          <svg class="cart-svg" viewBox="0 0 38 28">
+            <path d="M10 24a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm18 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 2h4l4.5 14.5h18l4.5-11H9" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="cart-count">0</span>
+        </div>
+        <span class="cart-label">Cart</span>
+      </a>
+    </div>
+
+    <!-- Second Sub-Nav Bar -->
+    <div class="navbar-second">
+      <div class="nav-all-menu" onclick="window.location.href='search.html'">
+        <div class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span>All</span>
+      </div>
+
+      <nav class="subnav-links" aria-label="Secondary Navigation">
+        <a href="search.html?q=deal" class="subnav-link">Today's Deals</a>
+        <a href="account.html" class="subnav-link">Customer Service</a>
+        <a href="search.html?category=Books" class="subnav-link">Books</a>
+        <a href="search.html?category=Electronics" class="subnav-link">Electronics</a>
+        <a href="search.html?category=Clothing" class="subnav-link">Fashion</a>
+        <a href="search.html?category=Home%20%26%20Kitchen" class="subnav-link">Home & Kitchen</a>
+        <a href="search.html?category=Beauty" class="subnav-link">Beauty</a>
+        <a href="search.html?category=Toys" class="subnav-link">Toys & Games</a>
+        <a href="search.html?q=registry" class="subnav-link">Registry</a>
+        <a href="search.html?q=gift+cards" class="subnav-link">Gift Cards</a>
+        <a href="search.html?q=sell" class="subnav-link">Sell</a>
+      </nav>
+
+      <a href="search.html?category=Electronics" class="subnav-promo">
+        Shop great tech deals & savings
+      </a>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Carousel Banner -->
+    <div class="home-hero-wrap">
+      <div class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1500&q=80');">
+          <div style="position: absolute; top: 70px; left: 40px; color: #fff; max-width: 600px; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">
+            <span style="background: var(--amz-orange); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 2px; font-size: 13px;">HOLIDAY DEALS</span>
+            <h1 style="font-size: 38px; font-weight: 700; margin: 10px 0;">Huge Savings on Premium Audio & Tech</h1>
+            <p style="font-size: 18px; margin-bottom: 15px;">Save up to 40% on top headphones, tablets, and smart devices.</p>
+            <a href="search.html?category=Electronics" class="btn-amz btn-amz-primary" style="font-size: 14px; font-weight: 700;">Shop Tech Deals</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1500&q=80');">
+          <div style="position: absolute; top: 70px; left: 40px; color: #fff; max-width: 600px; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">
+            <span style="background: var(--amz-orange); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 2px; font-size: 13px;">WINTER FASHION</span>
+            <h2 style="font-size: 38px; font-weight: 700; margin: 10px 0;">Cozy Essentials & Classic Styles</h2>
+            <p style="font-size: 18px; margin-bottom: 15px;">Discover winter jackets, warm fleeces, and iconic denim fits.</p>
+            <a href="search.html?category=Clothing" class="btn-amz btn-amz-primary" style="font-size: 14px; font-weight: 700;">Explore Apparel</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1500&q=80');">
+          <div style="position: absolute; top: 70px; left: 40px; color: #fff; max-width: 600px; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">
+            <span style="background: var(--amz-orange); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 2px; font-size: 13px;">HOME & KITCHEN</span>
+            <h2 style="font-size: 38px; font-weight: 700; margin: 10px 0;">Upgrade Your Kitchen Countertop</h2>
+            <p style="font-size: 18px; margin-bottom: 15px;">Top-rated air fryers, single-serve brewers, and enameled cast iron.</p>
+            <a href="search.html?category=Home%20%26%20Kitchen" class="btn-amz btn-amz-primary" style="font-size: 14px; font-weight: 700;">Shop Kitchen</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Arrows -->
+      <button class="hero-nav-arrow hero-nav-prev" aria-label="Previous slide">&#10094;</button>
+      <button class="hero-nav-arrow hero-nav-next" aria-label="Next slide">&#10095;</button>
+    </div>
+
+    <!-- Main Container with Cards & Grids -->
+    <div class="container">
+      <!-- 8 Category Cards Floating Over Hero -->
+      <div class="home-cards-grid">
+        <!-- Card 1: Electronics (Quad) -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Electronics & Audio</h2>
+          <div class="card-quad-grid">
+            <a href="product.html?id=1" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=300&q=80" alt="Earbuds" />
+              <span class="quad-label">Wireless Earbuds</span>
+            </a>
+            <a href="product.html?id=2" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Headphones" />
+              <span class="quad-label">Over-Ear ANC</span>
+            </a>
+            <a href="product.html?id=3" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=300&q=80" alt="Tablets" />
+              <span class="quad-label">Tablets & Pads</span>
+            </a>
+            <a href="search.html?category=Electronics" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=300&q=80" alt="Accessories" />
+              <span class="quad-label">All Electronics</span>
+            </a>
+          </div>
+          <a href="search.html?category=Electronics" class="amz-card-link">See all in Electronics</a>
+        </div>
+
+        <!-- Card 2: Clothing (Single Feature) -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Fashion & Warm Styles</h2>
+          <div class="amz-card-image-box">
+            <img src="https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=600&q=80" alt="Denim and Fashion" />
+          </div>
+          <a href="search.html?category=Clothing" class="amz-card-link">Explore men's & women's apparel</a>
+        </div>
+
+        <!-- Card 3: Books (Quad) -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Top Bestselling Books</h2>
+          <div class="card-quad-grid">
+            <a href="product.html?id=7" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=300&q=80" alt="Self-Help" />
+              <span class="quad-label">Atomic Habits</span>
+            </a>
+            <a href="product.html?id=8" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=300&q=80" alt="Creativity" />
+              <span class="quad-label">Creative Act</span>
+            </a>
+            <a href="product.html?id=9" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=300&q=80" alt="Fiction" />
+              <span class="quad-label">Top Fiction</span>
+            </a>
+            <a href="search.html?category=Books" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1532012164546-f432f2e3777a?auto=format&fit=crop&w=300&q=80" alt="All Books" />
+              <span class="quad-label">Editors' Picks</span>
+            </a>
+          </div>
+          <a href="search.html?category=Books" class="amz-card-link">Shop popular reads</a>
+        </div>
+
+        <!-- Card 4: Home & Kitchen -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Kitchen & Dining Deals</h2>
+          <div class="amz-card-image-box">
+            <img src="https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=600&q=80" alt="Kitchen Appliances" />
+          </div>
+          <a href="search.html?category=Home%20%26%20Kitchen" class="amz-card-link">Upgrade your kitchen essentials</a>
+        </div>
+
+        <!-- Card 5: Sports & Outdoors -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Fitness & Outdoors</h2>
+          <div class="card-quad-grid">
+            <a href="product.html?id=13" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=300&q=80" alt="Tumblers" />
+              <span class="quad-label">Drinkware</span>
+            </a>
+            <a href="product.html?id=14" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=300&q=80" alt="Weights" />
+              <span class="quad-label">Strength</span>
+            </a>
+            <a href="product.html?id=15" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?auto=format&fit=crop&w=300&q=80" alt="Trackers" />
+              <span class="quad-label">Trackers</span>
+            </a>
+            <a href="search.html?category=Sports" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=300&q=80" alt="Outdoor" />
+              <span class="quad-label">More Gear</span>
+            </a>
+          </div>
+          <a href="search.html?category=Sports" class="amz-card-link">See all sports & fitness</a>
+        </div>
+
+        <!-- Card 6: Beauty -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Beauty & Personal Care</h2>
+          <div class="amz-card-image-box">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" alt="Beauty Care" />
+          </div>
+          <a href="search.html?category=Beauty" class="amz-card-link">Explore skincare & hair tools</a>
+        </div>
+
+        <!-- Card 7: Toys & Games -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Toys & Family Games</h2>
+          <div class="card-quad-grid">
+            <a href="product.html?id=19" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=300&q=80" alt="LEGO" />
+              <span class="quad-label">Building Sets</span>
+            </a>
+            <a href="product.html?id=20" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=300&q=80" alt="Board Games" />
+              <span class="quad-label">Board Games</span>
+            </a>
+            <a href="product.html?id=21" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=300&q=80" alt="Card Games" />
+              <span class="quad-label">Card Decks</span>
+            </a>
+            <a href="search.html?category=Toys" class="quad-item">
+              <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=300&q=80" alt="Puzzles" />
+              <span class="quad-label">All Games</span>
+            </a>
+          </div>
+          <a href="search.html?category=Toys" class="amz-card-link">Shop toys & board games</a>
+        </div>
+
+        <!-- Card 8: Automotive -->
+        <div class="amz-card">
+          <h2 class="amz-card-title">Automotive & Road Ready</h2>
+          <div class="amz-card-image-box">
+            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80" alt="Automotive Essentials" />
+          </div>
+          <a href="search.html?category=Automotive" class="amz-card-link">Browse car jump starters & care</a>
+        </div>
+      </div>
+
+      <!-- Deals of the Day Horizontal Product Slider -->
+      <section class="product-slider-section">
+        <div class="slider-header-row">
+          <h2 class="slider-title">Today's Deals</h2>
+          <div class="deal-timer-badge">
+            <span>⏰ Ends in:</span>
+            <span id="deals-countdown-timer">14:42:19</span>
+          </div>
+          <a href="search.html?q=deal" class="slider-see-more">See all deals</a>
+        </div>
+
+        <!-- Rendered via js/main.js initHomePage() -->
+        <div class="horizontal-products-row" id="home-deals-row"></div>
+      </section>
+
+      <!-- Prime Banner Strip -->
+      <div style="background: linear-gradient(90deg, #00A8E1 0%, #0073B1 100%); color: #fff; border-radius: 4px; padding: 25px 35px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
+        <div>
+          <span style="font-weight: 900; font-style: italic; font-size: 24px;">prime</span>
+          <h3 style="font-size: 22px; font-weight: 700; margin: 4px 0;">Fast, free delivery on millions of items</h3>
+          <p style="font-size: 14px; opacity: 0.95;">Plus award-winning movies, TV shows, Amazon Music, and exclusive deals.</p>
+        </div>
+        <a href="search.html?category=Electronics" class="btn-amz btn-amz-primary" style="font-size: 14px; font-weight: 700; padding: 12px 24px;">
+          Shop with Prime
+        </a>
+      </div>
+
+      <!-- Based on your browsing history Horizontal Slider -->
+      <section class="product-slider-section">
+        <div class="slider-header-row">
+          <h2 class="slider-title">Based on your browsing history</h2>
+          <a href="search.html" class="slider-see-more">View recommendations</a>
+        </div>
+
+        <!-- Rendered via js/main.js initHomePage() -->
+        <div class="horizontal-products-row" id="home-browsing-row"></div>
+      </section>
+
+      <!-- Personalized Sign-in Card Strip -->
+      <div class="personalization-strip">
+        <h3 class="personalization-title">See personalized recommendations</h3>
+        <a href="login.html" class="btn-amz btn-amz-primary" style="width: 250px; font-weight: 700; margin-bottom: 10px;">
+          Sign in
+        </a>
+        <div style="font-size: 11px;">
+          New customer? <a href="register.html">Start here.</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <!-- Back to top -->
+    <div class="footer-back-to-top" id="footer-back-to-top">
+      Back to top
+    </div>
+
+    <!-- 4 Columns Links -->
+    <div class="container">
+      <div class="footer-links-grid">
+        <div>
+          <h3 class="footer-col-title">Get to Know Us</h3>
+          <ul class="footer-links-list">
+            <li><a href="search.html">Careers</a></li>
+            <li><a href="search.html">Amazon Newsletter</a></li>
+            <li><a href="search.html">About Amazon</a></li>
+            <li><a href="search.html">Investor Relations</a></li>
+            <li><a href="search.html">Amazon Devices</a></li>
+            <li><a href="search.html">Amazon Science</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Make Money with Us</h3>
+          <ul class="footer-links-list">
+            <li><a href="search.html">Sell products on Amazon</a></li>
+            <li><a href="search.html">Sell on Amazon Business</a></li>
+            <li><a href="search.html">Sell apps on Amazon</a></li>
+            <li><a href="search.html">Become an Affiliate</a></li>
+            <li><a href="search.html">Advertise Your Products</a></li>
+            <li><a href="search.html">Self-Publish with Us</a></li>
+            <li><a href="search.html">Host an Amazon Hub</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Amazon Payment Products</h3>
+          <ul class="footer-links-list">
+            <li><a href="search.html">Amazon Business Card</a></li>
+            <li><a href="search.html">Shop with Points</a></li>
+            <li><a href="search.html">Reload Your Balance</a></li>
+            <li><a href="search.html">Amazon Currency Converter</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Let Us Help You</h3>
+          <ul class="footer-links-list">
+            <li><a href="account.html">Amazon and COVID-19</a></li>
+            <li><a href="account.html">Your Account</a></li>
+            <li><a href="account.html">Your Orders</a></li>
+            <li><a href="search.html">Shipping Rates & Policies</a></li>
+            <li><a href="account.html">Returns & Replacements</a></li>
+            <li><a href="account.html">Manage Your Content and Devices</a></li>
+            <li><a href="account.html">Help</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Middle bar -->
+      <div class="footer-middle-bar">
+        <a href="index.html" class="amz-logo">
+          <span>amazon</span>
+          <svg class="logo-smile" viewBox="0 0 100 24" fill="none" style="width: 55px;">
+            <path d="M4 14C24 23 70 23 96 6" stroke="#FF9900" stroke-width="4" stroke-linecap="round"/>
+            <path d="M88 4L97 6L91 14" fill="#FF9900"/>
+          </svg>
+        </a>
+        <div style="display: flex; gap: 10px;">
+          <div class="footer-select-btn">🌐 English</div>
+          <div class="footer-select-btn">$ USD - U.S. Dollar</div>
+          <div class="footer-select-btn">🇺🇸 United States</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <div class="footer-bottom-links">
+          <a href="#">Conditions of Use</a>
+          <a href="#">Privacy Notice</a>
+          <a href="#">Consumer Health Data Privacy Disclosure</a>
+          <a href="#">Your Ads Privacy Choices</a>
+        </div>
+        <div>
+          © 1996-2026, Amazon.com, Inc. or its affiliates
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
