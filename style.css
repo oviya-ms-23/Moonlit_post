@@ -1,0 +1,206 @@
+/* style.css */
+/* Colour palette */
+:root {
+  --bg-night: #11111B; /* Midnight navy */
+  --accent-lavender: #B7A9D6;
+  --accent-rose: #D8A7B1;
+  --accent-cream: #F2E7D5;
+  --accent-gold: #C7A66A;
+  --text-light: #F7F0E6;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Lora', serif;
+  background: var(--bg-night);
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 0.5rem;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+/* Layout */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-cream);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-lavender);
+}
+
+.btn {
+  background: var(--accent-gold);
+  color: var(--bg-night);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover, .btn:focus {
+  background: var(--accent-rose);
+}
+
+/* Envelopes grid */
+.envelopes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.envelope {
+  background: var(--accent-cream);
+  border: 2px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.envelope:hover, .envelope:focus {
+  transform: translateY(-4px);
+}
+
+.envelope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,%3Csvg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg"%3E%3Cpolygon points="0,0 100,0 50,35" fill=%22%23C7A66A%22 /%3E%3C/svg%3E') no-repeat center/cover;
+  opacity: 0.2;
+}
+
+.envelope h3 {
+  font-size: 1rem;
+  color: var(--bg-night);
+  margin-top: 0.5rem;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--accent-cream);
+  color: var(--bg-night);
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--bg-night);
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.saved-list {
+  list-style: none;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.saved-item {
+  background: var(--accent-cream);
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-item button {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .title {font-size: 2rem;}
+  .subtitle {font-size: 1rem;}
+}
